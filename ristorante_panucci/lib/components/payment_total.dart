@@ -45,18 +45,20 @@ class PaymentTotal extends StatelessWidget {
         ElevatedButton(
           onPressed: () {},
           style: AppColors.buttonStyle,
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(right: 8.0),
-                  child: Icon(Icons.account_balance_wallet),
-                ),
-                Text(
-                  "Pedir",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                )
-              ]),
+          child: const Expanded(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: Icon(Icons.account_balance_wallet),
+                  ),
+                  Text(
+                    "Pedir",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  )
+                ]),
+          ),
         )
       ],
     );

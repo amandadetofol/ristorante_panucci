@@ -19,9 +19,7 @@ class Highlights extends StatelessWidget {
                 child: Text(
                   "Destaques",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 32,
-                      fontFamily: "Caveat"),
+                  style: TextStyle(fontSize: 32, fontFamily: "Caveat"),
                 ),
               ),
             ),
