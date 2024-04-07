@@ -18,7 +18,9 @@ final String itemDescription;
         children: <Widget>[
           Image(
             image: AssetImage(imageURI),
-            fit: BoxFit.cover,
+            fit: BoxFit.fitWidth,
+            height: 120,
+            width: double.infinity,
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
