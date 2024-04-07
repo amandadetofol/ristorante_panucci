@@ -23,14 +23,19 @@ class Highlights extends StatelessWidget {
                 ),
               ),
             ),
-            SliverList(
-                delegate: SliverChildBuilderDelegate((context, index) {
-              return HighlightItem(
-                  imageURI: items[index]["image"],
-                  itemTitle: items[index]["name"],
-                  itemPrice: items[index]["price"],
-                  itemDescription: items[index]["description"]);
-            }, childCount: items.length))
+            SliverGrid(
+              delegate: SliverChildBuilderDelegate((context, index) {
+                return HighlightItem(
+                    imageURI: items[index]["image"],
+                    itemTitle: items[index]["name"],
+                    itemPrice: items[index]["price"],
+                    itemDescription: items[index]["description"]);
+              }, childCount: items.length),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: MediaQuery.of(context).orientation == Orientation.landscape ? 2 : 1,
+
+              ),)
+
           ],
         ));
   }
